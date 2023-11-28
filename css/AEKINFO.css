@@ -1,0 +1,19 @@
+.mySlides {
+    text-align: center;
+}
+
+.circular-border {
+    border-radius: 50%;
+    border: 3px solid #fff; /* Adjust the border color and width as needed */
+    overflow: hidden;
+    width: 300px; /* Adjust the width and height as needed */
+    height: 300px;
+    object-fit: cover;
+    
+  }
+  
+  .circular-border img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
