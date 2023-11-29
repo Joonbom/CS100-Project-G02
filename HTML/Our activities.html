@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <title>Forms - CSTU Passport</title>
-    <link rel="stylesheet" href="C:\Users\Joonbom\Desktop\Work\HTML\CS100-Project-G02\css\styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/BackGround.css">
 </head>
 
 <body>
+    <div style="overflow:auto">
+        <div class="box col-s-12">
+            <h1 class="logo col-6 ">OUR CSTU PASSPORT</h1>
+        </div>
+        <ul class="col-6 col-s-12 ul">
+            <li class="li"><a href="index.html">HomePage</a></li>
+            <li class="li"><a href="Our activities.html">Form Activities</a></li>
+            <li class="li"><a href="Activities.html">Our Activities</a></li>
+        </ul>
+    </div>
+
     <!-- Form Container -->
     <div class="form-container">
         <h1>CSTU Passport</h1>
@@ -50,19 +62,20 @@
                 <label for="activityType">Type of Work/Activity</label>
                 <select id="activityType" name="activityType">
                     <option value="" disabled selected>Select an option</option>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Course">Course</option>
+                    <option value="Activity">Activity</option>
+                    <option value="Work">Work</option>
+                    <option value="Research">Research</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Competition">Competition</option>
+                    <option value="Computer Science">Computer Science</option>
                 </select>
             </div>
             <!-- <div class="form-group">
             <label for="activityType">Type of Work/Activity</label>
             <select id="activityType" name="activityType">
-            <option value="" disabled selected>Select an option</option>
-            <option value="Course">Course</option>
-            <option value="Activity">Activity</option>
-            <option value="Work">Work</option>
-            <option value="Research">Research</option>
-            <option value="Sports">Sports</option>
-            <option value="Competition">Competition</option>
-            <option value="Computer Science">Computer Science</option>
+            
             </select>
         </div> -->
 
@@ -125,8 +138,32 @@
         </form>
     </div>
 
+    <div class="footer">
+        <h3>Contact Information</h3>
+        <div class="INFO">
+            <ul class="col-4 col-s-12 Icon">
+                <li class="hide"><ion-icon name="call-outline"></ion-icon> <span>0931166300</span></li>
+                <li class="hide"><ion-icon name="mail-outline"></ion-icon> <span>wachirakorn.chi@dome.tu.ac.th</span>
+                </li>
+                <li class="hide"><ion-icon name="logo-instagram"></ion-icon> <span>bomm_xun</span></li>
+            </ul>
+            <ul class="col-4 col-s-12 Icon">
+                <li class="hide"><ion-icon name="call-outline"></ion-icon> <span>xxxxxxxxxx</span></li>
+                <li class="hide"><ion-icon name="mail-outline"></ion-icon> <span>anantavip.sup@dome.tu.ac.th</span></li>
+                <li class="hide"><ion-icon name="logo-instagram"></ion-icon> <span>ice.anantavip</span></li>
+            </ul>
+            <ul class="col-4 col-s-12 Icon">
+                <li class="hide"><ion-icon name="call-outline"></ion-icon> <span>0846554200</span></li>
+                <li class="hide"><ion-icon name="mail-outline"></ion-icon> <span>prachaya.khe@dome.tu.ac.th</span></li>
+                <li class="hide"><ion-icon name="logo-instagram"></ion-icon> <span>a.axxek_pk</span></li>
+            </ul>
+        </div>
+    </div>
+
     <!-- JavaScript -->
-    <script src="C:\Users\Joonbom\Desktop\Work\HTML\CS100-Project-G02\JS\script.js"></script>
+    <script src="../JS/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
