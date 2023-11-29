@@ -16,3 +16,17 @@
   height: auto;
   border-radius: 50%;
 }
+
+/* Styling for gallery items */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 30%;
+  height: auto;
+}
