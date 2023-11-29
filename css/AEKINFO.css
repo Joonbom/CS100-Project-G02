@@ -30,7 +30,7 @@ div.gallery {
   border: 1px solid #ccc;
   overflow: hidden;
   margin: 10px;
-  flex: 0 0 30%; /* Set the initial size to 30%, adjust as needed */
+  flex: 0 0 30%;
 }
 
 div.gallery:hover {
