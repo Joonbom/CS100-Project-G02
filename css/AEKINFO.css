@@ -47,7 +47,7 @@ img {
   content: "";
   display: table;
   clear: both;
-} 
+}
 
 [class*="col-"] {
   float: left;
@@ -64,4 +64,3 @@ div.desc {
   padding: 20px;
   text-align: center;
 }
-
