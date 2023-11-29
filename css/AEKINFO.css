@@ -17,21 +17,33 @@
   border-radius: 50%;
 }
 
+/* Center an image */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 /* Styling for gallery items */
 div.gallery {
   border: 1px solid #ccc;
+  overflow: hidden; /* Ensure that overflow does not affect the layout */
 }
 
 div.gallery:hover {
   border: 1px solid #777;
 }
 
-div.gallery img {
-  width: 30%;
-  height: auto;
+img {
+  width: 100%;
+  height: 200px; /* Maintain aspect ratio */
+   /* Ensure the entire container is covered */
+  display: block; /* Remove any default inline styling on the image */
+  margin: 0 auto; /* Center the image within its container */
 }
 
 div.desc {
-  padding: 15px;
+  padding: 20px;
   text-align: center;
 }
