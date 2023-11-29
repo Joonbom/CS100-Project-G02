@@ -17,17 +17,20 @@
   border-radius: 50%;
 }
 
-/* Styling for gallery container */
+/* Update gallery container styling */
 .gallery-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow the items to wrap to the next line */
 }
 
-/* Styling for gallery items */
+/* Update gallery item styling */
 div.gallery {
   border: 1px solid #ccc;
-  overflow: hidden; /* Ensure that overflow does not affect the layout */
-  margin: 10px; /* Add margin for spacing between gallery items */
+  overflow: hidden;
+  margin: 10px;
+  flex: 0 0 30%; /* Set the initial size to 30%, adjust as needed */
 }
 
 div.gallery:hover {
@@ -39,11 +42,12 @@ img {
   height: auto;
 }
 
+/* Clear the float for the row class */
 .row:after {
   content: "";
-  clear: both;
   display: table;
-}
+  clear: both;
+} 
 
 [class*="col-"] {
   float: left;
@@ -51,9 +55,8 @@ img {
   width: 100%;
 }
 
-
 div.gallery img {
-  width: 30%;
+  width: 100%;
   height: auto;
 }
 
