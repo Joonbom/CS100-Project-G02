@@ -51,7 +51,7 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 560px) {
   /*mobile*/
   [class*="col-"] {
     width: 100%;
