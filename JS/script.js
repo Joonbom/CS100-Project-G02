@@ -106,18 +106,72 @@ function populatePassports(Activity_Create) {
 
     for (const type of Activity_Create) {
         const div = document.createElement("div");
-        div.classList.add("Cre");
+        activityTypeSelect.classList.add("border");
         activityTypeSelect.appendChild(div);
+
+        const div1 = document.createElement("div");
+        div1.classList.add("div1");
+        div.appendChild(div1);
+
+        const div2 = document.createElement("div");
+        div2.classList.add("div2");
+        div.appendChild(div2);
+
+        const div3 = document.createElement("div");
+        div3.classList.add("div3");
+        div.appendChild(div3);
 
         const header = document.createElement("h3");
         header.textContent = type.title;
-        div.appendChild(header);
+        div1.appendChild(header);
 
-        const Text = document.createElement("p");
-        Text.textContent = type.first_name;
-        div.appendChild(Text);
+        const description = document.createElement("p");
+        description.textContent = type.description;
+        div1.appendChild(description);
 
+        const information = document.createElement("h3");
+        information.textContent = "Activity information";
+        div2.appendChild(information);
 
+        const type_of_work_id = document.createElement("p");
+        type_of_work_id.textContent = "Type of work: " + type.type_of_work_id;
+        div2.appendChild(type_of_work_id);
+
+        const academic_year = document.createElement("p");
+        academic_year.textContent = "Academic year: " + type.academic_year;
+        div2.appendChild(academic_year);
+
+        const semester = document.createElement("p");
+        semester.textContent = "Semester: " + type.semester;
+        div2.appendChild(semester);
+
+        const start_date = document.createElement("p");
+        start_date.textContent = "Start date: " + type.start_date;
+        div2.appendChild(start_date);
+
+        const end_date = document.createElement("p");
+        end_date.textContent = "End date: " + type.end_date;
+        div2.appendChild(end_date);
+
+        const location = document.createElement("p");
+        location.textContent = "Location: " + type.location;
+        div2.appendChild(location);
+
+        const Made = document.createElement("h3");
+        Made.textContent = "Made by";
+        div3.appendChild(Made);
+
+        const name = document.createElement("p");
+        name.textContent = "Name: " + type.first_name + " " + type.last_name;
+        div3.appendChild(name);
+
+        const student_id = document.createElement("p");
+        student_id.textContent = "Student id: " + type.student_id;
+        div3.appendChild(student_id);
+
+        const email = document.createElement("p");
+        email.textContent = "Email: " + type.email;
+        div3.appendChild(email);
     }
 }
 
