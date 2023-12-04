@@ -106,7 +106,7 @@ function populatePassports(Activity_Create) {
 
     for (const type of Activity_Create) {
         const div = document.createElement("div");
-        activityTypeSelect.classList.add("border");
+        div.classList.add("border");
         activityTypeSelect.appendChild(div);
 
         const div1 = document.createElement("div");
@@ -217,7 +217,7 @@ async function submitForm(event) {
         start_date: formData.get("startDate"),
         end_date: formData.get("endDate"),
         location: formData.get("location"),
-        description: formData.get("description")
+        description: formData.get("description"),
     };
 
     console.log(data);
