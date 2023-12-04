@@ -73,6 +73,22 @@ async function fetchActivityTypes() {
     }
 }
 
+async function fetchPassports() {
+    try {
+        const response = await fetch(`http://${window.location.hostname}:${port}/getPassports`);
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        } else {
+            console.error("Failed to fetch activity types.");
+            return [];
+        }
+    } catch (error) {
+        console.error("An error occurred while fetching activity types:", error);
+        return [];
+    }
+}
+
 // Function to populate activity types in the select element
 function populateActivityTypes(activityTypes) {
     const activityTypeSelect = document.getElementById("activityType");
@@ -85,10 +101,32 @@ function populateActivityTypes(activityTypes) {
     }
 }
 
+function populatePassports(Activity_Create) {
+    const activityTypeSelect = document.getElementById("Activity_Create");
+
+    for (const type of Activity_Create) {
+        const div = document.createElement("div");
+        div.classList.add("Cre");
+        activityTypeSelect.appendChild(div);
+
+        const header = document.createElement("h3");
+        header.textContent = type.title;
+        div.appendChild(header);
+
+        const Text = document.createElement("p");
+        Text.textContent = type.first_name;
+        div.appendChild(Text);
+
+
+    }
+}
+
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
     const activityTypes = await fetchActivityTypes();
+    const Activity_Create = await fetchPassports();
     populateActivityTypes(activityTypes);
+    populatePassports(Activity_Create);
 });
 
 // Function to submit the form

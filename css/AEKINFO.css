@@ -17,44 +17,7 @@
   border-radius: 50%;
 }
 
-/* Update gallery container styling */
-.gallery-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Allow the items to wrap to the next line */
-}
-
-/* Update gallery item styling */
-div.gallery {
-  border: 1px solid #ccc;
-  overflow: hidden;
-  margin: 10px;
-  flex: 0 0 30%;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
 img {
   width: 100%;
   height: auto;
-}
-
-/* Clear the float for the row class */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 20px;
-  text-align: center;
 }
