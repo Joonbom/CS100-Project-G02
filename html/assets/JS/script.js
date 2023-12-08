@@ -32,7 +32,7 @@ function validateStudentID() {
         errorElement.textContent = ""; // Clear the error message when valid
     }
 
-    if(!IDPattern.test(studentIDInput.value)) {
+    if (!IDPattern.test(studentIDInput.value)) {
         errorSTU.textContent = "The number should begin with 66.";
     } else {
         errorSTU.textContent = ""; // Clear the error message when valid
@@ -60,7 +60,7 @@ function validateAcademicY() {
     const AcademicYInput = document.getElementById("academicYear").value;
     const errorElement = document.getElementById("YearError");
 
-    if(AcademicYInput >= 2567) {
+    if (AcademicYInput >= 2567) {
         errorElement.textContent = "This Year doesn't exist.";
         return false;
     } else {
@@ -257,7 +257,7 @@ async function submitForm(event) {
     event.preventDefault();
 
     // Validate form inputs before submission
-    if (!validateName() || !validateStudentID() || !validateEmail() || !validateAcademicY() || !validateDatetime() || !validateSemester()) {
+    if (!validateName() || !validateStudentID() || !validateEmail()) {
         return;
     }
 
