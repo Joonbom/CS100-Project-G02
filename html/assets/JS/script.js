@@ -21,14 +21,21 @@ function validateName() {
 // Function to validate Student ID
 function validateStudentID() {
     const studentIDInput = document.getElementById("studentID");
-    const studentIDPattern = /^66\d{8}$/;
+    const studentIDPattern = /^\d{10}$/;
+    const IDPattern = /^66\d{8}$/;
     const errorElement = document.getElementById("studentIDError");
+    const errorSTU = document.getElementById("IDError");
 
     if (!studentIDPattern.test(studentIDInput.value)) {
         errorElement.textContent = "Please enter a 10-digit Student ID.";
-        return false;
     } else {
         errorElement.textContent = ""; // Clear the error message when valid
+    }
+
+    if(!IDPattern.test(studentIDInput.value)) {
+        errorSTU.textContent = "The number should begin with 66.";
+    } else {
+        errorSTU.textContent = ""; // Clear the error message when valid
     }
     return true;
 }
@@ -49,11 +56,72 @@ function validateEmail() {
     return true;
 }
 
+function validateAcademicY() {
+    const AcademicYInput = document.getElementById("academicYear").value;
+    const errorElement = document.getElementById("YearError");
+
+    if(AcademicYInput >= 2567) {
+        errorElement.textContent = "This Year doesn't exist.";
+        return false;
+    } else {
+        errorElement.textContent = "";
+    }
+    return true;
+}
+
+function validateDatetime() {
+    const startDateInput = document.getElementById("startDate").value;
+    const endDateInput = document.getElementById("endDate").value;
+    const startDate = new Date(startDateInput);
+    const endDate = new Date(endDateInput);
+    const errorElement = document.getElementById("DateError");
+
+    if (endDate <= startDate) {
+        errorElement.textContent = "End datetime should be after the start datetime.";
+        return false;
+    } else {
+        errorElement.textContent = "";
+    }
+    return true;
+}
+
+function validateSemester() {
+    const startDateInput = document.getElementById("startDate").value;
+    const endDateInput = document.getElementById("endDate").value;
+    const startDate = new Date(startDateInput);
+    const endDate = new Date(endDateInput);
+    const inputDate = new Date('2024-01-1');
+    const semester = document.getElementById("semester").value;
+    const errorSemester = document.getElementById("SemesterError");
+
+    if (endDate <= inputDate && startDate <= inputDate) {
+        if (semester == 2) {
+            errorSemester.textContent = "Semester not match with date time";
+        }
+        return false;
+    } else {
+        errorSemester.textContent = "";
+    }
+
+    if (endDate >= inputDate && startDate >= inputDate) {
+        if (semester == 1) {
+            errorSemester.textContent = "Semester not match with date time";
+        }
+        return false;
+    } else {
+        errorSemester.textContent = "";
+    }
+    return true;
+}
+
 // Function to validate form inputs on user input
 function validateFormOnInput() {
     validateName();
     validateStudentID();
     validateEmail();
+    validateAcademicY();
+    validateDatetime();
+    validateSemester();
 }
 
 // Function to fetch activity types from the backend
@@ -189,7 +257,7 @@ async function submitForm(event) {
     event.preventDefault();
 
     // Validate form inputs before submission
-    if (!validateName() || !validateStudentID() || !validateEmail()) {
+    if (!validateName() || !validateStudentID() || !validateEmail() || !validateAcademicY() || !validateDatetime() || !validateSemester()) {
         return;
     }
 
@@ -261,7 +329,9 @@ document.getElementById("myForm").addEventListener("submit", submitForm);
 
 // Event listeners for input validation on user input
 document.getElementById("fullname").addEventListener("input", validateName);
-document
-    .getElementById("studentID")
-    .addEventListener("input", validateStudentID);
+document.getElementById("studentID").addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+document.getElementById("academicYear").addEventListener("input", validateAcademicY);
+document.getElementById("startDate").addEventListener("input", validateDatetime);
+document.getElementById("endDate").addEventListener("input", validateDatetime);
+document.getElementById("semester").addEventListener("input", validateSemester);

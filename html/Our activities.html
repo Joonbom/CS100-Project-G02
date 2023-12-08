@@ -41,6 +41,7 @@
                 <input type="text" id="studentID" name="studentID" />
                 <small>Please enter your 10-digit student ID.</small>
                 <span id="studentIDError" class="error"></span>
+                <span id="IDError" class="error"></span>
             </div>
 
             <!-- University Email Field -->
@@ -80,6 +81,8 @@
                     <option value="2568">2568</option>
                     <option value="2569">2569</option>
                 </select>
+                <small>Please choose the right Year</small>
+                <span id="YearError" class="error"></span>
             </div>
 
             <!-- Semester Field -->
@@ -91,6 +94,8 @@
                     <option value="2">2</option>
                     <option value="Summer">Summer</option>
                 </select>
+                <small>Please choose Semester</small>
+                <span id="SemesterError" class="error"></span>
             </div>
 
             <!-- Start Date/Time Field -->
@@ -103,6 +108,8 @@
             <div class="form-group">
                 <label for="endDate">End Date/Time</label>
                 <input type="datetime-local" id="endDate" name="endDate" />
+                <small>Please choose Date time</small>
+                <span id="DateError" class="error"></span>
             </div>
 
             <!-- Location Field -->
