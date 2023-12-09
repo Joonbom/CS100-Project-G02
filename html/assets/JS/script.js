@@ -22,7 +22,7 @@ function validateName() {
 function validateStudentID() {
     const studentIDInput = document.getElementById("studentID");
     const studentIDPattern = /^\d{10}$/;
-    const IDPattern = /^66\d{8}$/;
+    const IDPattern = /66/;
     const errorElement = document.getElementById("studentIDError");
     const errorSTU = document.getElementById("IDError");
 
